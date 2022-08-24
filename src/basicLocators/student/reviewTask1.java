@@ -5,7 +5,8 @@ public class reviewTask1 {
         /**
          * 1. Open OrangeHRM website
          * 2. Login using credentials
-         * 3.
+         * 3. Locate web elements using each locator
+         * 4. Locate same web elements using css selector
          */
     }
 }
