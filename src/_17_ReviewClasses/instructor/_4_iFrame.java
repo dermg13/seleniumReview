@@ -8,7 +8,7 @@ public class _4_iFrame {
      * iFrames are windows inside the window
      * It has links to external sites
      * iFrames can be nested
-     * Has "frame" tag name
+     * Has "iframe" tag name
      * To access contents of iFrame, you have to switch the window
      *
      */
