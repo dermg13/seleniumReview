@@ -20,7 +20,7 @@ public class Review {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        driver.get("http://automationpractice.com/index.php");
+        driver.get("https://www.google.com/");
 
         //4. parent -> child
         //5. parent -> all children
