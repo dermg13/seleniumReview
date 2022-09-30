@@ -40,7 +40,7 @@ public class _01_TestNGReview {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php?id_category=3&controller=categorywww.cars.com/");
-        Assert.assertTrue(driver.findElement(By.xpath("//a[@class='sf-with-ul' and text()='Women']")).isEnabled());
+
 
         driver.close();
     }
