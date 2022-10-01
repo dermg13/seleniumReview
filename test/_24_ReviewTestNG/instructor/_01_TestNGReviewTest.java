@@ -1,5 +1,6 @@
 package _24_ReviewTestNG.instructor;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -20,25 +21,26 @@ public class _01_TestNGReviewTest {
 
     @Test
     public void testWomenStore(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\mder\\OneDrive\\Documents\\Selenium\\Drivers\\chrome\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\mder\\OneDrive\\Documents\\Selenium\\Drivers\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php?id_category=3&controller=categorywww.cars.com/");
-        Assert.assertEquals(driver.getTitle(), "Women");
+        Assert.assertEquals(driver.getTitle(), "My Store");
 
         driver.close();
     }
 
-    @Test
+    @Test (testName = "US001-Verify links", description = "Verify links are displayed", priority = -1)
     public void testButton(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\mder\\OneDrive\\Documents\\Selenium\\Drivers\\chrome\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\mder\\OneDrive\\Documents\\Selenium\\Drivers\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php?id_category=3&controller=categorywww.cars.com/");
+        Assert.assertTrue(driver.findElement(By.xpath("//a[@class='sf-with-ul' and text()='Women']")).isEnabled());
 
 
         driver.close();
